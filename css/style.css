@@ -121,6 +121,25 @@ body {
 }
 
 /* Shopiing cart */
+.navbar #shopping-cart-button {
+  position: relative;
+}
+
+.navbar #shopping-cart-button .quantity-badge {
+  display: inline-block;
+  padding: 1px 5px;
+  background-color: red;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
 .navbar .shopping-cart {
   position: absolute;
   top: 100%;
@@ -147,27 +166,90 @@ body {
   position: relative;
 }
 
+.navbar .shopping-cart img {
+  height: 4rem;
+  border-radius: 50%;
+}
+
 .navbar .shopping-cart h3 {
-  font-size: 1.6rem;
-  padding-bottom: 0.5rem;
+  font-size: 1.4rem;
 }
 
 .navbar .shopping-cart .item-price {
   font-size: 1.2rem;
 }
 
-.navbar .shopping-cart .remove-item {
-  position: absolute;
-  right: 1rem;
+.shopping-cart .cart-item #sp-cart-add,
+.shopping-cart .cart-item #sp-cart-minus {
+  display: inline-block;
+  padding: 2px 5px;
   cursor: pointer;
+  margin: 0 8px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
-.navbar .shopping-cart .remove-item:hover {
-  color: var(--primary-color);
+
+.shopping-cart h4 {
+  font-size: 1.6rem;
+  margin-top: -1rem;
+  text-align: center;
 }
-.navbar .shopping-cart img {
-  height: 6rem;
-  border-radius: 50%;
+
+/* Checkout Form */
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px dashed black;
+  margin-top: 1rem;
+  padding: 1rem;
 }
+
+.form-container h5 {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.form-container form {
+  width: 100%;
+  text-align: center;
+}
+
+.form-container form label {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.form-container form span {
+  text-align: right;
+}
+
+.form-container form input {
+  background-color: #ddd;
+  padding: 5px;
+  font-size: 1rem;
+  width: 70%;
+}
+
+.form-container form .checkout-button {
+  padding: 6px 14px;
+  background-color: royalblue;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 1rem auto;
+  cursor: pointer;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
 
 /* Hero Section */
 .hero {
@@ -398,12 +480,6 @@ body {
 .products .product-price {
   font-size: 1.3rem;
   font-weight: bold;
-}
-
-.products .product-price span {
-  text-decoration: line-through;
-  font-size: 1rem;
-  font-weight: lighter;
 }
 
 /* Contact Section */
